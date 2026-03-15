@@ -1,27 +1,47 @@
-import java.util.Scanner;
+import java.util.*;
+import java.io.*;
 
 public class ResumeMaker {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter Name:");
+        System.out.println("===== RESUME MAKER =====");
+
+        System.out.print("Enter Name: ");
         String name = sc.nextLine();
 
-        System.out.println("Enter Phone:");
+        System.out.print("Enter Phone: ");
         String phone = sc.nextLine();
 
-        System.out.println("Enter Skills:");
+        System.out.print("Enter Objective: ");
+        String objective = sc.nextLine();
+
+        System.out.print("Enter Skills (comma separated): ");
         String skills = sc.nextLine();
 
-        System.out.println("Enter Education:");
+        System.out.print("Enter Education: ");
         String edu = sc.nextLine();
 
-        System.out.println("\n===== YOUR RESUME =====");
-        System.out.println("Name: " + name);
-        System.out.println("Phone: " + phone);
-        System.out.println("Skills: " + skills);
-        System.out.println("Education: " + edu);
+        System.out.print("Enter Experience: ");
+        String exp = sc.nextLine();
+
+        String resume =
+                "\n===== YOUR RESUME =====\n" +
+                "Name: " + name + "\n" +
+                "Phone: " + phone + "\n" +
+                "Objective: " + objective + "\n" +
+                "Skills: " + skills + "\n" +
+                "Education: " + edu + "\n" +
+                "Experience: " + exp + "\n";
+
+        System.out.println(resume);
+
+        FileWriter fw = new FileWriter("resume.txt");
+        fw.write(resume);
+        fw.close();
+
+        System.out.println("✅ Resume saved to file resume.txt");
     }
 }

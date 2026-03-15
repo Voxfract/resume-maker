@@ -1,0 +1,8 @@
+
+===== YOUR RESUME =====
+Name: david
+Phone: 2345678999
+Objective: want to become a good software engineer
+Skills: coding,dancing,singing
+Education: degree bsccs
+Experience: doen an internship in tca for 2 months in software analysis
